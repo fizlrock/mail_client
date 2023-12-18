@@ -37,7 +37,7 @@
                      <TextField fx:id="passwordTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                   </children>
                </HBox>
-               <Button mnemonicParsing="false" prefWidth="10000.0" text="Заполнить по умолчанию" />
+               <Button mnemonicParsing="false" prefWidth="10000.0" text="Заполнить по умолчанию" onAction="#fillFields"/>
             </VBox>
          </content>
       </Tab>

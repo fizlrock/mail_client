@@ -52,7 +52,7 @@ public class JMailController implements Initializable {
 			filesListView.getItems().remove(0);
 	}
 
-	public void onSendButtonClick(ActionEvent actionEvent) throws MessagingException, IOException {
+	public void fillFields(ActionEvent actionEvent) {
 		serverTextField.textProperty().setValue("smtp.mail.ru");
 		loginTextField.textProperty().setValue("fizlrock@mail.ru");
 		passwordTextField.textProperty().setValue("HWpaY9QkjDMWnwuh6R3a");
@@ -60,6 +60,10 @@ public class JMailController implements Initializable {
 		bodyTextField.textProperty().setValue("some message");
 		recipientsTextField.textProperty().setValue("nirku0soft@yandex.ru");
 
+	}
+
+	public void onSendButtonClick(ActionEvent actionEvent) throws MessagingException, IOException {
+		
 		Properties prop = System.getProperties();
 		prop.put("mail.smtp.auth", "true");
 		prop.put("mail.smtp.ssl.enable", "true");
